@@ -1,0 +1,167 @@
+{
+    "experiment": "Normal-only Isolation Forest with validation-based calibration",
+    "training_rows_normal_only": 6000,
+    "validation_rows": 3000,
+    "test_rows": 5000,
+    "test_normal": 2220,
+    "test_attack": 2780,
+    "max_validation_false_positive_rate": 0.15,
+    "encoded_features": 58,
+    "pca_95_dimensions": 23,
+    "pca_99_dimensions": 31,
+    "selected_model": "numeric_only",
+    "selected_threshold": 0.43938558249324244,
+    "validation_comparison": {
+        "full_features": {
+            "threshold": 0.46277152837820473,
+            "validation_metrics": {
+                "accuracy": 0.6253333333333333,
+                "balanced_accuracy": 0.6854367264481381,
+                "precision": 0.8818635607321131,
+                "recall": 0.5190989226248776,
+                "f1": 0.6535141800246609,
+                "f2": 0.5656350053361793,
+                "mcc": 0.3528493270957317,
+                "flagged": 1202,
+                "false_positive_rate": 0.14822546972860126,
+                "confusion_matrix": [
+                    [
+                        816,
+                        142
+                    ],
+                    [
+                        982,
+                        1060
+                    ]
+                ],
+                "roc_auc": 0.8387909229765733,
+                "pr_auc": 0.8983963220177236
+            }
+        },
+        "numeric_only": {
+            "threshold": 0.43938558249324244,
+            "validation_metrics": {
+                "accuracy": 0.632,
+                "balanced_accuracy": 0.6903338860955426,
+                "precision": 0.88379705400982,
+                "recall": 0.5288932419196866,
+                "f1": 0.6617647058823529,
+                "f2": 0.5750798722044729,
+                "mcc": 0.3612062468727753,
+                "flagged": 1222,
+                "false_positive_rate": 0.14822546972860126,
+                "confusion_matrix": [
+                    [
+                        816,
+                        142
+                    ],
+                    [
+                        962,
+                        1080
+                    ]
+                ],
+                "roc_auc": 0.8333099891833091,
+                "pr_auc": 0.8800840798484983
+            }
+        },
+        "pca_95": {
+            "threshold": 0.42294064097729095,
+            "validation_metrics": {
+                "accuracy": 0.6266666666666667,
+                "balanced_accuracy": 0.686416158377619,
+                "precision": 0.8822553897180763,
+                "recall": 0.5210577864838394,
+                "f1": 0.6551724137931034,
+                "f2": 0.5675272029016428,
+                "mcc": 0.3545188237592526,
+                "flagged": 1206,
+                "false_positive_rate": 0.14822546972860126,
+                "confusion_matrix": [
+                    [
+                        816,
+                        142
+                    ],
+                    [
+                        978,
+                        1064
+                    ]
+                ],
+                "roc_auc": 0.7861996200867379,
+                "pr_auc": 0.8524512863052832
+            }
+        },
+        "pca_99": {
+            "threshold": 0.424358815476538,
+            "validation_metrics": {
+                "accuracy": 0.62,
+                "balanced_accuracy": 0.6815189987302146,
+                "precision": 0.8802698145025295,
+                "recall": 0.5112634671890304,
+                "f1": 0.6468401486988847,
+                "f2": 0.5580500320718409,
+                "mcc": 0.34617979825304146,
+                "flagged": 1186,
+                "false_positive_rate": 0.14822546972860126,
+                "confusion_matrix": [
+                    [
+                        816,
+                        142
+                    ],
+                    [
+                        998,
+                        1044
+                    ]
+                ],
+                "roc_auc": 0.7873150274302282,
+                "pr_auc": 0.8570461374126699
+            }
+        }
+    },
+    "final_test_metrics": {
+        "accuracy": 0.6156,
+        "balanced_accuracy": 0.6328115885669843,
+        "precision": 0.7375415282392026,
+        "recall": 0.479136690647482,
+        "f1": 0.5808983863933711,
+        "f2": 0.5152406003403992,
+        "mcc": 0.27475052016172336,
+        "flagged": 1806,
+        "false_positive_rate": 0.21351351351351353,
+        "confusion_matrix": [
+            [
+                1746,
+                474
+            ],
+            [
+                1448,
+                1332
+            ]
+        ],
+        "roc_auc": 0.7613481107006288,
+        "pr_auc": 0.7689323515005733
+    },
+    "original_v1_same_test_metrics": {
+        "accuracy": 0.4304,
+        "balanced_accuracy": 0.4727072396137144,
+        "precision": 0.4429530201342282,
+        "recall": 0.09496402877697842,
+        "f1": 0.15639810426540285,
+        "f2": 0.11266643905769887,
+        "mcc": -0.08370079022321879,
+        "flagged": 596,
+        "false_positive_rate": 0.14954954954954955,
+        "confusion_matrix": [
+            [
+                1888,
+                332
+            ],
+            [
+                2516,
+                264
+            ]
+        ],
+        "roc_auc": 0.3104309255298464,
+        "pr_auc": 0.44918444304346
+    },
+    "note": "Detectors train on normal traffic only. Validation labels select the model and threshold. The official testing labels are used only for final evaluation. Improved performance is not guaranteed."
+}

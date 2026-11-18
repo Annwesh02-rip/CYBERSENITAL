@@ -1,0 +1,213 @@
+
+.cs-live {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.cs-live-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  border-radius: 30px;
+  padding: 9px 12px;
+  font-size: 11px;
+  font-weight: 800;
+  color: #637a83;
+  border: 1px solid #d7e1e5;
+  background: #f6f8f9;
+}
+
+.cs-live-badge.running {
+  color: #15765d;
+  border-color: #9bcdb9;
+  background: #e9f8f0;
+}
+
+.cs-live-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 12px;
+}
+
+.cs-live-select {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  flex: 1;
+  min-width: 210px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #506a75;
+}
+
+.cs-live-select select {
+  height: 44px;
+  border: 1px solid #d3dfe3;
+  border-radius: 9px;
+  background: white;
+  color: #324b58;
+  padding: 0 12px;
+  max-width: 100%;
+  min-width: 0;
+  font-size: 12px;
+}
+
+.cs-live-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 44px;
+  padding: 0 15px;
+  border-radius: 9px;
+  border: 1px solid #c6d7db;
+  background: white;
+  color: #286c78;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.cs-live-button.start {
+  color: white;
+  border-color: #186f77;
+  background: #186f77;
+}
+
+.cs-live-button.stop {
+  color: #ae5147;
+  background: #fff6f5;
+  border-color: #ecc7c2;
+}
+
+.cs-live-button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.cs-live-note {
+  font-size: 12px;
+  line-height: 1.7;
+  color: #71858d;
+  margin-top: 14px;
+  overflow-wrap: anywhere;
+}
+
+.cs-live-error {
+  margin-top: 14px;
+  padding: 13px;
+  background: #fff1ef;
+  border: 1px solid #edc7c2;
+  border-radius: 9px;
+  color: #a23e37;
+  font-size: 12px;
+}
+
+.cs-live-metrics {
+  display: grid;
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.cs-live-metric {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  min-width: 0;
+}
+
+.cs-live-metric svg {
+  color: #217b83;
+}
+
+.cs-live-metric span {
+  color: #718690;
+  font-size: 12px;
+}
+
+.cs-live-metric strong {
+  color: #263f4d;
+  font-size: 23px;
+  overflow-wrap: anywhere;
+}
+
+.cs-live-rate {
+  color: #1d777f;
+  background: #eaf6f4;
+  border-radius: 8px;
+  padding: 8px 11px;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.cs-live-chart {
+  height: 325px;
+  min-width: 0;
+  width: 100%;
+}
+
+.cs-live-protocols {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.cs-live-protocol-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+
+.cs-live-protocol-top strong {
+  color: #344c59;
+}
+
+.cs-live-protocol-top span {
+  color: #7a8e97;
+}
+
+.cs-live-track {
+  height: 9px;
+  background: #eaf0f1;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.cs-live-track div {
+  height: 100%;
+  border-radius: 20px;
+  background: #277e85;
+  transition: width 0.25s ease;
+}
+
+@media (max-width: 1000px) {
+  .cs-live-metrics {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .cs-live-metrics {
+    grid-template-columns: 1fr;
+  }
+
+  .cs-live-controls {
+    align-items: stretch;
+  }
+
+  .cs-live-button {
+    flex: 1;
+  }
+
+  .cs-live-chart {
+    height: 250px;
+  }
+}

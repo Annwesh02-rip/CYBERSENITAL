@@ -1,0 +1,70 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.env
+.DS_Store
+frontend/node_modules/
+frontend/dist/
+*.db
+*.sqlite3
+models/*.joblib
+models/*report.json
+datasets/raw/*.csv
+datasets/processed/*.csv
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# React
+node_modules/
+dist/
+build/
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Local databases
+backend/data/
+*.db
+*.sqlite
+*.sqlite3
+*.sqlite3-wal
+*.sqlite3-shm
+
+# Datasets
+datasets/raw/
+datasets/processed/
+
+# Models
+*.joblib
+!models/
+models/*
+!models/unsw_nb15_v2_pipeline.joblib
+!models/unsw_nb15_v2_report.json
+
+# Private network captures
+*.pcap
+*.pcapng
+
+# Generated reports
+CyberSentinel*.pdf
+CyberSentinel*.csv
+
+# Temporary and backup files
+*.bak
+*.log
+*.tmp
+
+# IDE and system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
